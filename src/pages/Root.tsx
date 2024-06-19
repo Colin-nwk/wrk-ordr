@@ -1,8 +1,12 @@
 import { Outlet } from "react-router-dom"
-
+import MainLayout from "../layouts/MainLayout"
 const Root = () => {
     return (
-        <><Outlet /></>
+        <>
+            <MainLayout>
+                <Outlet />
+            </MainLayout>
+        </>
     )
 }
 
