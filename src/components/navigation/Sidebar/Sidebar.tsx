@@ -19,7 +19,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="z-30 flex flex-col justify-between w-64 px-8 py-6 mt-20">
+            <div className="z-30 flex flex-col justify-between w-64 px-8 py-6 mt-20 bg-white">
                 <SidebarMenu links={generalLinks} title="General" pathname={pathname} />
                 <SidebarMenu links={planningLinks} title="Planning" pathname={pathname} />
                 <SidebarMenu links={logLinks} title="Log" pathname={pathname} />

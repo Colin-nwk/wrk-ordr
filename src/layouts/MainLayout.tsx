@@ -7,7 +7,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <div className="w-full h-full">
         <Topbar />
-        <div className="flex w-full h-full">
+        <div className="flex w-full h-full bg-[#F5F5F8]">
           <Sidebar />
           <div className="flex-1 h-full p-4 overflow-y-auto bg-[#F5F5F8] mt-24">
             {children}
