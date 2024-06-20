@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Bell } from "../icons/Bell"
 
 import SearchInput from '../inputs/SearchInput';
-import { images } from "../../assets/index"
+import { avatar } from "../../assets/index"
 const Topbar = () => {
     const location = useLocation();
     const currentPath = location.pathname as string;
@@ -20,7 +20,7 @@ const Topbar = () => {
             <div className="flex items-center justify-center space-x-2">
                 <Bell className='text-primary size-6' />
                 <img
-                    src={images.avatar}
+                    src={avatar}
                     alt="Profile Picture"
                     className="rounded-full"
                 />

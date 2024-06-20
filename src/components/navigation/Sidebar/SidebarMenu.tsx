@@ -7,13 +7,13 @@ const SidebarMenu = ({ links, pathname, title }: { links: any, pathname: string,
     return (
         <> <aside className="pb-6 border-b border-gray-300">
             <h4 className="px-2 my-2 text-sm text-secondary">{title}</h4>
-            <nav className="flex flex-col items-start justify-center space-y-1 text-secondary">
+            <nav className="flex flex-col items-start justify-center space-y-1 ">
                 {links.map(({ path, label, icon: Icon, sub }: { path: string, label: string, icon: any, sub: any }) => (
                     <div key={path} className="w-full h-full">
                         <NavLink
                             to={path}
                             className={({ isActive }) =>
-                                ` w-full p-2 transition-all rounded-lg cursor-pointer flex items-center  ${isActive ? "bg-primary text-white" : "hover:bg-secondary/10"
+                                ` w-full p-2 transition-all rounded-lg cursor-pointer flex items-center font-semibold  ${isActive ? "bg-primary text-white" : "hover:bg-secondary/10"
                                 }`
                             }
                         >
