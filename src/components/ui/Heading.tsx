@@ -24,7 +24,7 @@ const Heading: FC<HeadingProps> = ({
         h6: 'text-base',
     };
     const sizes = {
-        sm: 'text-sm',
+        sm: 'text-[16px]',
         md: 'text-[20px]',
         lg: 'text-[24px]',
         xl: 'text-[30px]'
