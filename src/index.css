@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #2A78A6;
+  --color-secondary: #495154;
+  --color-tertiary: #777777;
+  --color-paragraph: #666666;
+}
 
 @font-face {
   font-family: "Manrope";
@@ -13,6 +19,31 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  color: var(--color-tertiary);
+}
+
+p {
+  color: var(--color-paragraph);
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6db5e6;
+  width: 5px;
 }
 
 
@@ -20,7 +51,8 @@ body {
   content: '';
   position: absolute;
   left: -1px;
-  border-left: 1px solid #f5f4f4;
+  /* border-left: 1px solid #f5f4f4; */
+  border-left: 1px solid #d8d8d8;
   height: 230%;
   z-index: -10;
   transition: height 0.3s ease-in-out;
@@ -40,4 +72,25 @@ body {
 .animated-appearance.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.loader {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

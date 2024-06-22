@@ -1,10 +1,11 @@
 import { Input } from '@headlessui/react'
 import { SearchIcon } from "../icons/SearchIcon"
+import clsx from "clsx"
 
-const SearchInput = () => {
+const SearchInput = ({ className }: { className?: string }) => {
     return (
         <>
-            <label className="flex relative items-center ml-auto mr-4 justify-stretch w-20 lg:w-1/4 xl:w-1/3 rounded-lg border-[1px] border-secondary/20 bg-secondary/5 py-2.5 px-3.5 text-base text-secondary focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25 cursor-pointer" htmlFor='search'>
+            <label className={clsx(className, 'flex relative items-center justify-stretch w-full rounded-lg border-[1px] border-secondary/20 bg-secondary/5 py-2.5 px-3.5 text-base text-secondary focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25 cursor-pointer')} htmlFor='search'>
 
                 <SearchIcon className='mr-2' />
                 <Input

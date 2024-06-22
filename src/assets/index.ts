@@ -1,9 +1,2 @@
-import paper from "./icons/Paper.svg";
-import work from "./icons/Work.svg";
-import avatar from "./images/avatar.png";
-
-export const images = {
-  paper,
-  work,
-  avatar,
-};
+export { default as nature } from "./images/nature.jpg";
+export { default as avatar } from "./images/avatar.png";
