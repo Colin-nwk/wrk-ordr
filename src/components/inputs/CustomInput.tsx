@@ -5,6 +5,7 @@ import clsx from 'clsx';
 
 interface CustomInputProps {
     name: string;
+    label: string;
     control: Control<any>;
     rules?: { required: boolean };
     type?: string;
@@ -13,7 +14,7 @@ interface CustomInputProps {
     inputStyle?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ name, control, rules, type, options, inputStyle = 'primary', ...props }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ label, name, control, rules, type, options, inputStyle = 'primary', ...props }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     const {
@@ -99,7 +100,12 @@ const CustomInput: React.FC<CustomInputProps> = ({ name, control, rules, type, o
 
     return (
         <div className="mb-4">
-            {inputElement}
+            <label className="w-full rounded-lg">
+                <span className='font-medium'>
+                    {label}
+                </span>
+                {inputElement}
+            </label>
             {error && <span className="text-red-500">{error.message}</span>}
         </div>
     );

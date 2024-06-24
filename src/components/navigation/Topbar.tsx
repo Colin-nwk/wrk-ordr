@@ -34,7 +34,7 @@ const Topbar = () => {
                         className="rounded-full cursor-pointer"
 
                     />
-                    <span className="ml-2 text-sm font-semibold truncate ">John Doe</span>
+                    <span className="ml-2 text-sm font-bold text-gray-900 truncate ">John Doe</span>
                 </span>
             </div>
         </nav></>

@@ -19,7 +19,7 @@ const ReusableModal: React.FC<{
                         leaveFrom="opacity-100 transform-[scale(100%)]"
                         leaveTo="opacity-0 transform-[scale(95%)]"
                     >
-                        <DialogPanel className={`p-5 overflow-y-auto bg-white rounded-xl max-h-[25rem] ${content?.size || ModalSize.MEDIUM}`}>
+                        <DialogPanel className={`p-5 overflow-y-auto bg-white rounded-xl max-h-[30rem] ${content?.size || ModalSize.MEDIUM}`}>
                             {content?.content}
                         </DialogPanel>
                     </TransitionChild>

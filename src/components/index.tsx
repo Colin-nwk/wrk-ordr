@@ -1,3 +1,5 @@
+
+
 export { default as Wrapper } from "./ui/Wrapper"
 export { default as CustomButton } from "./ui/CustomButton"
 export { default as CustomTab } from "./controls/CustomTab"
@@ -11,3 +13,6 @@ export { default as Dropdown } from "./controls/Dropdown"
 export { default as MenuDropdown } from "./controls/MenuDropdown"
 export { default as ProfileModalContent } from "./profileModalContent/index"
 export { default as Appointments } from "./jobModalContent/Appointments"
+export { default as MainInput } from "./inputs/MainInput"
+
+export { default as VerificationRadio } from "./inputs/VerificationRadio"
