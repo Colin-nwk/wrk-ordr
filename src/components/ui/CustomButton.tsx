@@ -3,10 +3,10 @@ import { Button as HeadlessButton } from '@headlessui/react';
 import clsx from 'clsx';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: 'primary' | 'secondary' | 'danger' | 'transparent';
+    variant?: 'primary' | 'secondary' | 'danger' | 'transparent' | 'white';
     size?: 'sm' | 'md' | 'lg';
     isLoading?: boolean;
-    label: string;
+    label?: string;
     icon?: FC<React.ComponentProps<'svg'>>;
 }
 
@@ -21,15 +21,16 @@ const CustomButton: FC<ButtonProps> = ({
     icon: Icon,
     ...props
 }) => {
-    const baseStyles = 'rounded-lg py-2 px-4 text-sm transition-all h-fit flex items-center justify-center gap-x-1 capitalize duration-300 ease-in font-medium';
+    const baseStyles = 'rounded-lg text-sm transition-all h-fit flex items-center justify-center gap-x-1 capitalize duration-300 ease-in font-medium';
     const variants = {
         primary: 'bg-primary text-white hover:bg-primary/80 active:bg-primary/90',
         secondary: 'bg-gray-600 text-white hover:bg-secondary/80 active:bg-secondary/90',
         danger: 'bg-red-600 text-white hover:bg-red-500 active:bg-red-700',
-        transparent: ' font-semibold bg-transparent text-black/90 border hover:text-primary active:text-primary/90'
+        transparent: 'font-semibold bg-transparent text-black/90 border hover:text-primary active:text-primary/90',
+        white: 'font-semibold bg-white text-black border hover:text-primary active:text-primary/90'
     };
     const sizes = {
-        sm: 'py-1 px-3 text-sm',
+        sm: 'py-1 px-2 text-sm',
         md: 'py-2 px-4 text-base',
         lg: 'py-3 px-5 text-lg',
     };

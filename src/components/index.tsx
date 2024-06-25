@@ -1,3 +1,4 @@
+import ContractModalContent from './contracts/ContractModalContent';
 
 
 export { default as Wrapper } from "./ui/Wrapper"
@@ -16,3 +17,4 @@ export { default as Appointments } from "./jobModalContent/Appointments"
 export { default as MainInput } from "./inputs/MainInput"
 
 export { default as VerificationRadio } from "./inputs/VerificationRadio"
+export { default as ContractModalContent } from "./contracts/ContractModalContent"
