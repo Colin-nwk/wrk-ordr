@@ -1,4 +1,3 @@
-import ContractModalContent from './contracts/ContractModalContent';
 
 
 export { default as Wrapper } from "./ui/Wrapper"

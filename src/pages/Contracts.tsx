@@ -28,37 +28,37 @@ const Contracts = () => {
             </div>
             <div className="flex items-center justify-between mt-4 ">
                 <div className="flex items-center space-x-3">
-                    <CustomButton label="Add filter" variant="white" size="sm">
+                    <CustomButton label="Add filter" variant="white" >
                         <IoIosFunnel />
                     </CustomButton>
 
-                    <CustomButton variant="white" size="sm">
+                    <CustomButton variant="white" >
                         <span className="font-normal">Status</span>
                         <span className="">All</span>
                         <IoIosArrowDown />
                     </CustomButton>
 
-                    <CustomButton variant="white" size="sm">
+                    <CustomButton variant="white" >
                         <span className="font-normal ">Date</span>
                         <span className="">20-02.24-10.04.25</span>
                         <IoIosArrowDown />
                     </CustomButton>
 
 
-                    <CustomButton variant="white" size="sm">
+                    <CustomButton variant="white">
                         <span>Clear Filter</span>
                         <LiaTimesSolid />
                     </CustomButton>
 
-                    <CustomButton variant="white" size="sm">
+                    <CustomButton variant="white" >
                         <span className="font-normal ">Category</span>
                         <span className="">All</span>
                         <IoIosArrowDown />
                     </CustomButton>
 
                 </div>
-                <CustomButton variant="white" size="sm">
-                    <BsThreeDotsVertical />
+                <CustomButton variant="white" className="px-0.5">
+                    <BsThreeDotsVertical className="size-5" />
                 </CustomButton>
             </div>
         </div>

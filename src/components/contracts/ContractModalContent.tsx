@@ -10,7 +10,7 @@ const ContractModalContent = () => {
     return (
         <div className="">
             <div className="sticky top-0 z-10 bg-white">
-                <div className="flex items-center justify-between w-full pt-3 ">
+                <div className="flex items-center justify-between w-full pt-5 ">
 
                     <div className="flex items-center justify-center space-x-2">
 

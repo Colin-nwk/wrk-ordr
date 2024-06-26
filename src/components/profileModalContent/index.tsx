@@ -18,7 +18,7 @@ const Index = () => {
             </div>
             <div className="my-6 border-t"></div>
             <TabGroup className="w-full mt-4 ">
-                <TabList className="flex px-1 py-0.5 rounded-lg gap-x-1 bg-secondary/20 text-[#333333]">
+                <TabList className="flex  p-0.5 rounded-lg gap-x-0.5 bg-secondary/20 text-[#333333]">
                     <CustomTab title="profile" />
                     <CustomTab title="security settings" />
                 </TabList>
