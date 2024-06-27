@@ -1,5 +1,6 @@
 
 
+
 export { default as Wrapper } from "./ui/Wrapper"
 export { default as CustomButton } from "./ui/CustomButton"
 export { default as CustomTab } from "./controls/CustomTab"
@@ -25,3 +26,5 @@ export { default as FilterDateRange } from "./controls/FilterDateRange"
 export { default as HideColumns } from "./controls/HideColumns"
 export { default as SimpleTable } from "./tables/SimpleTable"
 export { default as RichEditor } from "./inputs/RichEditor"
+
+export { default as LanguageSwitcher } from "./ui/LanguageSwitcher"

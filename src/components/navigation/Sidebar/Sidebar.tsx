@@ -2,11 +2,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { Logout } from "../../icons/Logout"
 import { useEffect } from "react";
-import { generalLinks, planningLinks, settingLinks, logLinks } from "../../../data/links";
+import { useNavigationLinks } from "../../../data/links";
 import SidebarMenu from "./SidebarMenu";
 
 const Sidebar = () => {
 
+    const { generalLinks, planningLinks, logLinks, settingLinks } = useNavigationLinks()
     const { pathname } = useLocation();
     useEffect(() => {
         const elements = document.querySelectorAll('.animated-appearance');
