@@ -1,8 +1,11 @@
+import { FileUploadInput } from "../components"
 
 
 const Messages = () => {
     return (
-        <div>Messages</div>
+        <div>
+            <FileUploadInput />
+        </div>
     )
 }
 

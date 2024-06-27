@@ -1,6 +1,3 @@
-
-
-
 export { default as Wrapper } from "./ui/Wrapper"
 export { default as CustomButton } from "./ui/CustomButton"
 export { default as CustomTab } from "./controls/CustomTab"
@@ -28,3 +25,5 @@ export { default as SimpleTable } from "./tables/SimpleTable"
 export { default as RichEditor } from "./inputs/RichEditor"
 
 export { default as LanguageSwitcher } from "./ui/LanguageSwitcher"
+
+export { default as FileUploadInput } from "./inputs/FileUploadInput"
