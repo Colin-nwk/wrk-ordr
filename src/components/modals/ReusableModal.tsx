@@ -10,7 +10,7 @@ const ReusableModal: React.FC<{
         <Transition appear show={isOpen}>
             <Dialog open={isOpen} onClose={onClose} className="relative z-50">
                 <div className="fixed inset-0 bg-black/20" aria-hidden="true" />
-                <div className="fixed inset-0 flex items-center justify-center w-screen p-4">
+                <div className="fixed inset-0 flex items-center justify-center w-screen px-4">
                     <TransitionChild
                         enter="ease-out duration-300"
                         enterFrom="opacity-0 transform-[scale(95%)]"
@@ -19,7 +19,7 @@ const ReusableModal: React.FC<{
                         leaveFrom="opacity-100 transform-[scale(100%)]"
                         leaveTo="opacity-0 transform-[scale(95%)]"
                     >
-                        <DialogPanel className={`p-5 overflow-y-auto bg-white rounded-xl max-h-[25rem] ${content?.size || ModalSize.MEDIUM}`}>
+                        <DialogPanel className={`px-5 overflow-y-auto bg-white rounded-xl max-h-[30rem] ${content?.size || ModalSize.MEDIUM}`}>
                             {content?.content}
                         </DialogPanel>
                     </TransitionChild>
