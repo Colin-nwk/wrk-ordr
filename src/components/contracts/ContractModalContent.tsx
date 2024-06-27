@@ -1,4 +1,4 @@
-import { CustomButton, Heading, MainInput } from "../index"
+import { CustomButton, Heading, MainInput, RichEditor } from "../index"
 import { useModal } from "../../context/ModalContext"
 import { FaTimes } from "react-icons/fa"
 import { Briefcase } from "../icons/Briefcase"
@@ -46,6 +46,8 @@ const ContractModalContent = () => {
                     <MainInput label="start date" placeholder="Start Date" />
                     <MainInput label="end date" placeholder="End Date" />
                 </div>
+
+                <RichEditor label="description" name="description" />
             </div>
             <div className="sticky bottom-0 flex w-full py-5 space-x-3 bg-white">
                 <CustomButton variant="white" label="Cancel" className="w-full" />
