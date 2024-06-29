@@ -1,4 +1,6 @@
+// src/components/ErrorBoundary.tsx
 import React, { ErrorInfo, ReactNode } from 'react';
+import { useRouteError, isRouteErrorResponse, Link } from 'react-router-dom';
 
 interface ErrorBoundaryProps {
     children: ReactNode;
@@ -19,16 +21,47 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     }
 
     componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-        console.log('Error:', error, errorInfo);
+        console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     render() {
         if (this.state.hasError) {
-            return <h1>Something went wrong.</h1>;
+            return <ErrorFallback />;
         }
 
         return this.props.children;
     }
+}
+
+function ErrorFallback() {
+    const error = useRouteError();
+    console.error(error);
+
+    if (isRouteErrorResponse(error)) {
+        if (error.status === 404) {
+            return <div>This page doesn't exist!</div>;
+        }
+
+        if (error.status === 401) {
+            return <div>You aren't authorized to see this</div>;
+        }
+
+        if (error.status === 503) {
+            return <div>Looks like our API is down</div>;
+        }
+
+        if (error.status === 418) {
+            return <div>🫖</div>;
+        }
+    }
+
+    return (
+        <div className="error-container">
+            <h1>Oops! Something went wrong.</h1>
+            <p>We're sorry for the inconvenience. Please try again later.</p>
+            <Link to="/">Go back to homepage</Link>
+        </div>
+    );
 }
 
 export default ErrorBoundary;
