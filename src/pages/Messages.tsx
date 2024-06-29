@@ -1,5 +1,5 @@
 
-import { CustomCheckbox, CustomInput, CustomSelect, FileUploadInput, RichEditor, Wrapper } from "../components"
+import { CustomButton, CustomCheckbox, CustomInput, CustomSelect, FileUploadInput, RichEditor, Wrapper } from "../components"
 
 import useDynamicForm from "../hooks/useDynamicForm";
 import { Field } from "../schemas/dynamicSchema";
@@ -91,7 +91,8 @@ const Messages = () => {
                     variant="primary"
                 />
                 <CustomCheckbox name="subscribe" label="Subscribe to newsletter" control={control} />
-                <button type="submit">Submit</button>
+
+                <CustomButton label="submit" variant="primary" size="lg" type="submit" />
             </form>
         </Wrapper>
 
