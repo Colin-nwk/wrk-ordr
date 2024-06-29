@@ -42,7 +42,10 @@ const Messages = () => {
 
 
 
-    const { control, handleSubmit } = useDynamicForm(fields, defaultValues);
+    const { control, handleSubmit, formState } = useDynamicForm(fields, defaultValues);
+    const { isValid } = formState;
+
+
     const onSubmit = (data: any) => {
         console.log(data);
     };
@@ -92,7 +95,7 @@ const Messages = () => {
                 />
                 <CustomCheckbox name="subscribe" label="Subscribe to newsletter" control={control} />
 
-                <CustomButton label="submit" variant="primary" size="lg" type="submit" />
+                <CustomButton label="submit" variant="primary" size="lg" type="submit" disabled={!isValid} />
             </form>
         </Wrapper>
 
