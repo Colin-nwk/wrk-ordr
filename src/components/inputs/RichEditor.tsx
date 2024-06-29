@@ -39,7 +39,7 @@
 // export default RichTextEditor;
 
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useController, Control } from 'react-hook-form';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -48,11 +48,17 @@ import { Description, Field, Label } from '@headlessui/react'
 type RichTextEditorProps = {
     name: string;
     label: string;
+    placeholder?: string;
     control: Control<any>;
     rules?: { required: boolean };
 }
 
-const RichTextEditor: React.FC<RichTextEditorProps> = ({ name, label, control, rules }) => {
+
+
+
+const RichTextEditor: React.FC<RichTextEditorProps> = ({ name, label, control, rules, placeholder }) => {
+
+
     const {
         field: { onChange, onBlur, value },
         fieldState: { error },
@@ -61,6 +67,48 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ name, label, control, r
         control,
         rules,
     });
+    const formats = [
+        "header",
+        "bold",
+        "italic",
+        "underline",
+        "strike",
+        "blockquote",
+        "list",
+        "bullet",
+        "indent",
+        "link",
+        "color",
+        "clean",
+    ];
+
+
+
+
+    const modules = useMemo(
+        () => ({
+            toolbar: {
+                container: [
+                    [{ header: [2, 3, 4, false] }],
+                    ["bold", "italic", "underline", "blockquote"],
+                    [{ color: [] }],
+                    [
+                        { list: "ordered" },
+                        { list: "bullet" },
+                        { indent: "-1" },
+                        { indent: "+1" },
+                    ],
+                    ["link"],
+                    ["clean"],
+                ],
+            },
+            clipboard: {
+                matchVisual: true,
+            },
+        }),
+        []
+    );
+
 
     return (
         <Field className="">
@@ -72,7 +120,10 @@ const RichTextEditor: React.FC<RichTextEditorProps> = ({ name, label, control, r
                     value={value || ''}
                     onChange={onChange}
                     onBlur={onBlur}
+                    formats={formats}
+                    modules={modules}
                     className='w-full border-none min-h-20 focus-within:border-none focus:rounded-xl rounded-xl'
+                    placeholder={placeholder}
                 />
             </div>
 

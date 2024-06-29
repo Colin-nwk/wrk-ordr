@@ -30,7 +30,7 @@ const CustomCheckbox: React.FC<CustomCheckboxProps> = ({
 
     const baseStyles = 'group size-6 rounded-md p-1 ring-1 ring-inset focus:outline-none focus:ring-2 focus:ring-offset-2';
     const styles = {
-        primary: 'bg-white/10 ring-white/15 data-[checked]:bg-primary',
+        primary: 'bg-primary/20 ring-white/15 data-[checked]:bg-primary',
         secondary: 'bg-yellow-100 ring-yellow-200 data-[checked]:bg-yellow-500',
         tertiary: 'bg-green-100 ring-green-200 data-[checked]:bg-green-500',
     };

@@ -1,5 +1,5 @@
 
-import { CustomCheckbox, CustomInput, CustomSelect, FileUploadInput, RichEditor } from "../components"
+import { CustomCheckbox, CustomInput, CustomSelect, FileUploadInput, RichEditor, Wrapper } from "../components"
 
 import useDynamicForm from "../hooks/useDynamicForm";
 import { Field } from "../schemas/dynamicSchema";
@@ -49,7 +49,7 @@ const Messages = () => {
 
     return (
 
-        <div className="bg-white">
+        <Wrapper>
 
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
                 <FileUploadInput
@@ -61,7 +61,7 @@ const Messages = () => {
                     control={control}
 
                 />
-                <RichEditor name="description" label="description" control={control} rules={{ required: true }} />
+                <RichEditor name="description" label="description" control={control} rules={{ required: true }} placeholder="Write something awesome..." />
 
                 <CustomInput
                     name="username"
@@ -93,8 +93,8 @@ const Messages = () => {
                 <CustomCheckbox name="subscribe" label="Subscribe to newsletter" control={control} />
                 <button type="submit">Submit</button>
             </form>
+        </Wrapper>
 
-        </div>
     )
 }
 
