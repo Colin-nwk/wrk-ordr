@@ -1,5 +1,5 @@
 
-import { CustomButton, CustomCheckbox, CustomInput, CustomSelect, FileUploadInput, RichEditor, Wrapper } from "../components"
+import { CustomInput, FileUploadInput, RichEditor } from "../components"
 
 import useDynamicForm from "../hooks/useDynamicForm";
 import { Field } from "../schemas/dynamicSchema";
@@ -22,19 +22,14 @@ const Messages = () => {
         { name: 'email', type: 'email', placeholder: 'Email', errorMessage: 'Invalid email address', isRequired: true },
         { name: 'age', type: 'number', min: 18, placeholder: 'Age', errorMessage: 'You must be at least 18 years old', isRequired: true },
         { name: "documents", type: "file", isRequired: true, max: 5, maxSizeInMB: 5, min: 1 },
-        { name: "description", type: "string", isRequired: true },
-        { name: 'country', type: 'select', options: ['USA', 'Canada', 'UK'], placeholder: 'Country', errorMessage: 'Please select a country', isRequired: true },
-        { name: 'subscribe', type: 'checkbox', placeholder: 'Subscribe to newsletter', isRequired: true },
-        // {
-        //     name: 'gender', type: 'radio', options: ['Male', 'Female'], isRequired: true
-        // }
+        { name: "description", type: "string", isRequired: true }
     ];
 
 
     const defaultValues = {
         username: 'JohnDoe',
         email: 'john.doe@example.com',
-        age: "25",
+        age: 25,
         documents: "",
         description: "<p>lorem  lorem ipsom</p> <br/> <strong>Stronger</strong> <br/> <h1>headings</h1>"
 
@@ -42,17 +37,14 @@ const Messages = () => {
 
 
 
-    const { control, handleSubmit, formState } = useDynamicForm(fields, defaultValues);
-    const { isValid } = formState;
-
-
+    const { control, handleSubmit } = useDynamicForm(fields, defaultValues);
     const onSubmit = (data: any) => {
         console.log(data);
     };
 
     return (
 
-        <Wrapper>
+        <div className="bg-white">
 
             <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-4">
                 <FileUploadInput
@@ -64,7 +56,7 @@ const Messages = () => {
                     control={control}
 
                 />
-                <RichEditor name="description" label="description" control={control} rules={{ required: true }} placeholder="Write something awesome..." />
+                <RichEditor name="description" label="description" control={control} rules={{ required: true }} />
 
                 <CustomInput
                     name="username"
@@ -84,7 +76,6 @@ const Messages = () => {
                     variant="primary"
                     rules={{ required: true }}
                 />
-                <CustomSelect name="country" control={control} label="country" options={['USA', 'Canada', 'UK']} />
                 <CustomInput
                     name="age"
                     control={control}
@@ -93,12 +84,10 @@ const Messages = () => {
                     label="age"
                     variant="primary"
                 />
-                <CustomCheckbox name="subscribe" label="Subscribe to newsletter" control={control} />
-
-                <CustomButton label="submit" variant="primary" size="lg" type="submit" disabled={!isValid} />
+                <button type="submit">Submit</button>
             </form>
-        </Wrapper>
 
+        </div>
     )
 }
 

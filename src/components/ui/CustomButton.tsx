@@ -21,7 +21,7 @@ const CustomButton: FC<ButtonProps> = ({
     icon: Icon,
     ...props
 }) => {
-    const baseStyles = 'rounded-md text-sm transition-all h-fit flex items-center justify-center gap-x-1 capitalize duration-300 ease-in font-medium';
+    const baseStyles = 'rounded-md text-sm transition-all h-fit flex items-center justify-center gap-x-1 capitalize duration-300 ease-in font-medium disabled:cursor-not-allowed';
     const variants = {
         primary: 'bg-primary text-white hover:bg-primary/80 active:bg-primary/90',
         secondary: 'bg-gray-600 text-white hover:bg-secondary/80 active:bg-secondary/90',
@@ -33,6 +33,7 @@ const CustomButton: FC<ButtonProps> = ({
         sm: 'py-1 px-2 text-sm',
         md: 'py-2 px-4 text-base',
         lg: 'py-3 px-5 text-lg',
+        xl: 'py-4 px-6 text-xl'
     };
 
     const classes = clsx(

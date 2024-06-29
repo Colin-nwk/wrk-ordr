@@ -1,6 +1,4 @@
 
-
-
 export { default as Wrapper } from "./ui/Wrapper"
 export { default as CustomButton } from "./ui/CustomButton"
 export { default as CustomTab } from "./controls/CustomTab"
@@ -25,6 +23,13 @@ export { default as FilterDateRange } from "./controls/FilterDateRange"
 
 export { default as HideColumns } from "./controls/HideColumns"
 export { default as SimpleTable } from "./tables/SimpleTable"
-export { default as RichEditor } from "./inputs/RichEditor"
 
 export { default as LanguageSwitcher } from "./ui/LanguageSwitcher"
+
+export { default as RichEditor } from "./inputs/RichEditor"
+export { default as FileUploadInput } from "./inputs/FileUploadInput"
+export { default as CustomInput } from "./inputs/CustomInput"
+export { default as CustomPasswordInput } from "./inputs/CustomPasswordInput"
+export { default as CustomRadioInput } from "./inputs/CustomRadioInput"
+export { default as CustomSelect } from "./inputs/CustomSelect"
+export { default as CustomCheckbox } from "./inputs/CustomCheckbox"

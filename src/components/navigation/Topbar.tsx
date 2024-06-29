@@ -25,7 +25,6 @@ const Topbar = () => {
                 <div className="w-64 "></div>
                 <h1 className="ml-2 text-xl font-medium capitalize">{translatedPath}</h1>
             </div>
-
             <SearchInput className='w-20 ml-auto mr-4 lg:w-1/4 xl:w-1/3' />
 
             <div className="flex items-center justify-center space-x-2">

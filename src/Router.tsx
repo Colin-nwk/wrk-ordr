@@ -8,6 +8,7 @@ import Messages from "./pages/Messages";
 import Reports from "./pages/Reports";
 import NotFound from "./pages/NotFound";
 
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Dashboard />,
+
                 index: true
             },
             {
